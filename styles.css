@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    font-size: 2rem;
+}
+
+.main-container{
+    position: relative;
+}
+
+.rod {
+    height: 50px;
+    width: 20px;
+    border-radius: 20px;
+    background-color:#b7afaf;
+    position: absolute;
+    z-index: 1;
+}
+
+.left-rod {
+    left: 40px;
+}
+
+.right-rod {
+    right: 40px;
+}
+
+.calendar {
+    background-color: #ff4b4b;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    padding: 6px;
+    padding-top: 40px;
+    padding-bottom: 16px;
+}
+
+.calendar-header {
+    background-color: #ff4b4b;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.center-div {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    height: 100px;
+}
+
+.date {
+    font-size: 72px;
+    color: #000;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+
+    .logo{
+        position: absolute;
+        left: 0;
+    }
+    .footer-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    }
+
+    a{
+        left: 0;
+    }
+}
