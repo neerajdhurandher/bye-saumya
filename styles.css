@@ -65,15 +65,21 @@ h1 {
 }
 
 .center-div {
-    background-color: #f0f0f0;
+    background-color: rgb(237, 218, 196);
     border-radius: 10px;
     height: 100px;
 }
 
-.date {
+.date-page {
     font-size: 72px;
     color: #000;
     font-weight: bold;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: bisque;
+    transition: transform 0.2s, opacity 0.3s;
 }
 
 footer {
@@ -91,14 +97,28 @@ footer {
         left: 0;
     }
     .footer-content{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
     }
 
     a{
         left: 0;
     }
 }
+
+@media (max-width: 786px){
+  footer{
+    .logo{
+        margin: 5% 0%;
+    }
+     .footer-content{
+         margin-left: 25%; 
+     }
+        
+    }
+}
+
+

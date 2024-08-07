@@ -5,12 +5,14 @@ function calculateDaysLeft(targetDate) {
     const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
     return daysLeft;
 }
-
-document.addEventListener("DOMContentLoaded", () => {
+function set_remaining_date(){
     const targetDate = "August 20, 2024";
-    const daysLeft = calculateDaysLeft(targetDate);
+    let daysLeft = calculateDaysLeft(targetDate);
+    if(daysLeft < 0){
+        daysLeft = 0
+    }
     document.getElementById("days-left").textContent = daysLeft;
-});
+}
 
 function updateDateTime() {
     const footer = document.getElementById('current-timestamp');
@@ -22,3 +24,34 @@ function updateDateTime() {
 
 updateDateTime();
 setInterval(updateDateTime, 1000); // Update every second
+
+
+
+let page = document.querySelector(".date-page");
+
+
+function hidden(){
+    page.style.transform = 'translate(-30px,150px)';
+    page.style.opacity = "0";
+    setTimeout(visible, 200);
+}
+
+function visible(){
+    page.style.transform = 'translate(0px, 0px)';
+    setTimeout(()=>{
+        page.style.opacity = "0.8";
+    }, 400)
+}
+
+let count = 0;
+const maxCount = 5;
+
+const intervalId = setInterval(() => {
+  if (count < maxCount) {
+    hidden();
+    count++;
+  } else {
+    set_remaining_date();
+    clearInterval(intervalId);
+  }
+}, 700);
