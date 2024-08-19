@@ -107,7 +107,7 @@ type_writer(page_heading_text, page_heading_element, false)
 
 daysLeft = calculateDaysLeft(targetDate);
 
-if (daysLeft < 0){
+if (daysLeft <= 0){
     main_container_element.style.display = "none" 
     cloud_container_element.style.display = "block" 
 }else{
