@@ -101,19 +101,24 @@ async function type_writer(word, element, repeat) {
 
 }
 
-updateDateTime();
-setInterval(updateDateTime, 1000); // Update every second
-type_writer(page_heading_text, page_heading_element, false)
+
 
 daysLeft = calculateDaysLeft(targetDate);
+console.log("Days left : "+daysLeft)
 
 if (daysLeft <= 0){
+    console.log("inside if condition")
     main_container_element.style.display = "none" 
     cloud_container_element.style.display = "block" 
 }else{
+    console.log("outside of if condition")
     main_container_element.style.display = "block" 
     cloud_container_element.style.display = "none" 
 
 }
+
+updateDateTime();
+setInterval(updateDateTime, 1000); // Update every second
+type_writer(page_heading_text, page_heading_element, false)
 
 
