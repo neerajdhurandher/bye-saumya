@@ -1,4 +1,4 @@
-const targetDate = "August 20, 2024";
+const targetDate = "December 08, 2024";
 
 let page_heading_text = "Bye Bye Saumya!"
 let page_heading_element = document.getElementById("page-heading")
